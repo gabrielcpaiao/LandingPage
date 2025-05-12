@@ -1,5 +1,5 @@
 <template>
-    <footer class="footer footer-horizontal footer-center bg-gray-800 text-base-content rounded p-10">
+    <footer class="footer footer-horizontal footer-center bg-gray-950 text-base-content rounded p-10">
         <nav class="grid grid-flow-col gap-4">
             <a class="link link-hover">Sobre</a>
             <a class="link link-hover">Contato</a>

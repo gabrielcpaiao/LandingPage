@@ -7,7 +7,7 @@
             <div class="hero bg-neutral-600 min-h-screen">
                 <div class="hero-content flex-col lg:flex-row">
                     <img :src="myPhoto" alt="Profile picture"
-                        class="max-w-sm rounded-lg shadow-2xl size-100 rounded-full" />
+                        class="rounded-lg shadow-2xl size-100 rounded-full" />
                     <div>
                         <h1 class="text-5xl font-bold">Olá, seja bem-vindo!</h1>
                         <p class="py-6">

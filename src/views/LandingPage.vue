@@ -1,55 +1,49 @@
 <template>
-    <div>
-        <Navbar />
+  <div class="bg-neutral-950 text-white min-h-screen">
+    <Navbar />
 
-        <main class="text-center py-20 px-4">
+    <main class="pt-25">
 
-            <div class="hero bg-neutral-600 min-h-screen">
-                <div class="hero-content flex-col lg:flex-row">
-                    <img :src="myPhoto" alt="Profile picture"
-                        class="rounded-lg shadow-2xl size-100 rounded-full" />
-                    <div>
-                        <h1 class="text-5xl font-bold">Olá, seja bem-vindo!</h1>
-                        <p class="py-6">
-                            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                            quasi. In deleniti eaque aut repudiandae et a id nisi.
-                        </p>
-                        <button class="btn btn-primary">Get Started</button>
-                    </div>
-                </div>
-            </div>
+      <!-- HERO Component/HOME -->
+      <HeroSection
+        :photo="myPhoto"
+        photo-alt="Foto de Gabriel Paião"
+        :primary-button="{
+          text: 'Contratar',
+          link: '#hiring'
+        }"
+        :secondary-button="{
+          text: 'Baixar Currículo',
+          link: '/GabrielPaiaoDesenvolvedorSoftware.pdf',
+        }"
+      />
 
-            <hr>
-            <br>
+      <!-- ABOUT -->
+      <AboutSection />
 
-            <div>
-                <h1>APRESENTAÇÃO</h1>
-            </div>
+      <!-- EXPERIENCE -->
+      <ExperienceSection />
 
-            <hr>
-            <br>
-            <div>
-                <h1>COLOAR AS EXPERIENCIAS PROFISSIONAIS E PROJETOS EXECUTADOS</h1>
-            </div>
-            <hr>
-            <br>
-            <div>
-                <h1>IMPORTAR CURRICULO</h1>
-            </div>
-            <hr>
-            <br>
-            <div>
-                <h1>ENTRAR EM CONTATO PARA GERAR LANDING PAGE</h1>
-            </div>
+      <!-- PROJECTS -->
+      <ProjectsSection />
 
-        </main>
+      <!-- HIRING -->
+      <HireSection />
 
-        <Footer />
-    </div>
+    </main>
+
+    <Footer />
+  </div>
 </template>
 
 <script setup>
 import Navbar from '../components/Navbar.vue'
+import HeroSection from '../components/HeroSection.vue'
+import AboutSection from '../components/AboutSection.vue'
+import ExperienceSection from '../components/ExperienceSection.vue'
+import HireSection from '../components/HireSection.vue'
 import Footer from '../components/Footer.vue'
-import myPhoto from '../assets/desenho.jpg';
+import myPhoto from '../assets/GabrielPaiaoFoto.jpeg'
+import ProjectsSection from '../components/ProjectsSection.vue'
+
 </script>

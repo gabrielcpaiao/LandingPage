@@ -17,7 +17,9 @@
         <div class="flex flex-wrap gap-3 justify-center lg:justify-start">
           <a
             :href="primaryButton.link"
-            class="btn btn-primary">
+            @click.prevent="handlePrimaryClick"
+            class="btn btn-primary"
+          >
             {{ primaryButton.text }}
           </a>
           <a
@@ -36,7 +38,8 @@
 </template>
 
 <script setup>
-// Define props
+import { scrollToSection } from '../Utils/scrollToSection'
+
 const props = defineProps({
   photo: {
     type: String,
@@ -74,8 +77,14 @@ const props = defineProps({
     })
   }
 })
+
+function handlePrimaryClick() {
+  const id = props.primaryButton.link.replace('#', '')
+
+  scrollToSection(id)
+}
 </script>
 
 <style scoped>
-/* Add any specific styles if needed */
+
 </style>

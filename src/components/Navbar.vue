@@ -72,6 +72,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import { scrollToSection } from '../Utils/scrollToSection'
 
 const menuOpen = ref(false)
 
@@ -82,15 +83,6 @@ const navLinks = [
   { name: 'Projetos',     id: 'projects' },
   { name: 'Contratar',    id: 'hiring' },
 ]
-
-function scrollToSection(id) {
-  const el = document.getElementById(id)
-  if (el) {
-    const offset = 112 // adjust to match navbar height
-    const top = el.getBoundingClientRect().top + window.scrollY - offset
-    window.scrollTo({ top, behavior: 'smooth' })
-  }
-}
 </script>
 
 <style scoped>
